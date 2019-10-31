@@ -1,15 +1,25 @@
 import webbrowser
 
-url = "https://jira.surfstudio.ru/browse/"
+URL = "https://jira.surfstudio.ru/browse/"
 
 
-def parser(*argv):
+def safari_parser(*argv):
     for arg in argv:
-        temp_url = url + arg
-        webbrowser.get("safari").open_new_tab(temp_url)
+        if type(arg) == list:
+            for item in arg:
+                temp_url = URL + item
+                webbrowser.get("safari").open_new_tab(temp_url)
+        else:
+            temp_url = URL + arg
+            webbrowser.get("safari").open_new_tab(temp_url)
 
 
 def default_browser_parser(*argv):
     for arg in argv:
-        temp_url = url + arg
-        webbrowser.open_new_tab(temp_url)
+        if type(arg) == list:
+            for item in arg:
+                temp_url = URL + item
+                webbrowser.open_new_tab(temp_url)
+        else:
+            temp_url = URL + arg
+            webbrowser.open_new_tab(temp_url)
