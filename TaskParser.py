@@ -23,3 +23,5 @@ def default_browser_parser(*argv):
         else:
             temp_url = URL + arg
             webbrowser.open_new_tab(temp_url)
+
+# hey 2
