@@ -3,7 +3,7 @@ import webbrowser
 URL = "https://jira.surfstudio.ru/browse/"
 
 
-def safari_parser(*argv):
+def chrome_parser(*argv):
     for arg in argv:
         if type(arg) == list:
             for item in arg:
@@ -11,7 +11,7 @@ def safari_parser(*argv):
                 webbrowser.get("chrome").open_new_tab(temp_url)
         else:
             temp_url = URL + arg
-            webbrowser.get("safari").open_new_tab(temp_url)
+            webbrowser.get("chrome").open_new_tab(temp_url)
 
 
 def default_browser_parser(*argv):
@@ -23,3 +23,5 @@ def default_browser_parser(*argv):
         else:
             temp_url = URL + arg
             webbrowser.open_new_tab(temp_url)
+
+# hey1
