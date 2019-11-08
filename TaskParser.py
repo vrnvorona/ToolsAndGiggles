@@ -11,7 +11,7 @@ def safari_parser(*argv):
                 webbrowser.get("chrome").open_new_tab(temp_url)
         else:
             temp_url = URL + arg
-            webbrowser.get("chrome").open_new_tab(temp_url)
+            webbrowser.get("safari").open_new_tab(temp_url)
 
 
 def default_browser_parser(*argv):
