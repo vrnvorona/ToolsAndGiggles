@@ -1,6 +1,14 @@
 import webbrowser
+import re
 
 URL = "https://jira.surfstudio.ru/browse/"
+
+def cp(text_input):
+    arguments = re.findall("(?<=\[).*(?=\])",text_input)[0]
+    arguments = arguments.replace("'", "")
+    arguments = arguments.replace(" ", "")
+    arguments = arguments.split(",")
+    chrome_parser(arguments)
 
 
 def chrome_parser(*argv):
@@ -23,5 +31,3 @@ def default_browser_parser(*argv):
         else:
             temp_url = URL + arg
             webbrowser.open_new_tab(temp_url)
-
-# hey1

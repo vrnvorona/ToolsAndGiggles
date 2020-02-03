@@ -12,4 +12,4 @@ def tn(time_string, h = 0, m = 0):
     elif temp < 0:
         print(f"Overworked {result}")
     elif temp == 0:
-        print("you worked as much as you needed")
+        print("You worked as much as you needed")
