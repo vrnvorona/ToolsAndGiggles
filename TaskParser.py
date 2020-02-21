@@ -8,7 +8,7 @@ def cp(text_input):
     arguments = arguments.replace("'", "")
     arguments = arguments.replace(" ", "")
     arguments = arguments.split(",")
-    chrome_parser(arguments)
+    default_browser_parser(arguments)
 
 
 def chrome_parser(*argv):
