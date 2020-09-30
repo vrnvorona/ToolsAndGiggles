@@ -3,8 +3,9 @@ import re
 
 URL = "https://jira.surfstudio.ru/browse/"
 
+
 def cp(text_input):
-    arguments = re.findall("(?<=\[).*(?=\])",text_input)[0]
+    arguments = re.findall(r"(?<=\[).*(?=\])", text_input)[0]
     arguments = arguments.replace("'", "")
     arguments = arguments.replace(" ", "")
     arguments = arguments.split(",")
