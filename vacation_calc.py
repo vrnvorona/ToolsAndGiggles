@@ -1,3 +1,11 @@
+"""
+Vacation calendar. Usage:
+1. create Person: me = Person('2019-09-13'). Param is first day of work in Surf in iso format.
+2. add spent days: me.add_spent_days(7, '2020-04-16'). How much days, and first day of vacation (or any string at this point really).
+3. calculate: me.calculate('2020-12-23'). date in iso format at which you want to know how much you have vacation days.
+    returns tuple (how much days, days between date and first day, sum of spent days), so just take first value as result.
+"""
+
 from datetime import date, timedelta
 
 
