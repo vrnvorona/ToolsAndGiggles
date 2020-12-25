@@ -11,7 +11,7 @@ from datetime import date, timedelta
 
 class Person:
     # '2019-12-04' YYYY-MM-DD
-    def __init__(self, date_iso: str) -> None:
+    def __init__(self, date_iso: str='2019-09-13') -> None:
         # added default values for comfort. maybe db later?
         self.spent_days = {'2020-04-16': 7, '2020-07-01': 14}
         self.first_day = date.fromisoformat(date_iso)
@@ -32,6 +32,6 @@ class Person:
         days_spent = sum(self.spent_days.values())
         # basically days remaining is days between dates * vacation days per day - spent vacation days
         days_between = (day - self.first_day).days
-        vacation_days = (days_between-days_spent)*days_per_day-days_spent
+        vacation_days = days_between*days_per_day-days_spent
 
         return vacation_days, days_between, days_spent
